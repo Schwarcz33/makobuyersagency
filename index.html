@@ -269,7 +269,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1613490908653-b673070f6e14?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
       background-size: cover;
       background-position: center;
       z-index: 1;
@@ -1006,7 +1006,7 @@
       }
       
       .hero-agent-card {
-        display: none; /* Hide on mobile to prioritize hero text */
+        display: none;
       }
       
       .hero {
@@ -1089,7 +1089,7 @@
             <i class="fas fa-map-marker-alt"></i> Sydney's Independent Buyer's Agent
           </div>
           <h1>Securing your dream home <em>at a dream price.</em></h1>
-          <p class="hero-sub">Expert search, appraisal, aggressive negotiation, and auction representation. We act exclusively for the buyer.</p>
+          <p class="hero-sub">Expert search, precise appraisal, strategic negotiation, and professional auction representation. We act exclusively for the buyer.</p>
           <div class="hero-actions">
             <a href="#contact" class="btn-primary">Engage Our Team</a>
             <a href="#services" class="btn-outline">Discover How</a>
@@ -1108,7 +1108,7 @@
             </div>
           </div>
           <div class="agent-quote">
-            "I will help you navigate the Sydney market and secure your asset with absolute confidence."
+            "I will help you navigate the Sydney market and secure your ideal property with absolute confidence."
           </div>
         </div>
       </div>
@@ -1118,8 +1118,8 @@
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-label">The Mako Advantage</div>
-        <h2 class="section-title">Total Market Dominance.</h2>
+        <div class="section-label">The Strategic Advantage</div>
+        <h2 class="section-title">Unrivaled Market Access.</h2>
         <p class="section-sub">We bring clarity, speed, and confidence to your purchase. By acting exclusively for you, we level the playing field.</p>
       </div>
       
@@ -1132,14 +1132,14 @@
         
         <div class="service-card reveal" style="transition-delay: 0.1s;">
           <div class="service-icon"><i class="fas fa-file-contract"></i></div>
-          <h3>Aggressive Negotiation</h3>
-          <p>Data-driven property appraisals followed by strictly professional negotiation tactics. Our goal is to secure the asset below market expectations.</p>
+          <h3>Expert Negotiation</h3>
+          <p>Data-driven property appraisals followed by refined, professional negotiation strategies. Our goal is to secure the property at the best possible value.</p>
         </div>
         
         <div class="service-card reveal" style="transition-delay: 0.2s;">
           <div class="service-icon"><i class="fas fa-gavel"></i></div>
           <h3>Auction Bidding</h3>
-          <p>We remove the emotion. Professional, intimidating auction floor presence designed to outmaneuver the competition and execute the winning bid.</p>
+          <p>We remove the emotion. A professional, commanding auction floor presence designed to outmaneuver the competition and execute the winning bid.</p>
         </div>
       </div>
     </div>
@@ -1155,7 +1155,7 @@
       
       <div class="portfolio-grid">
         <div class="portfolio-card reveal">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Coastal Architecture" class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Coastal Architecture" class="portfolio-image">
           <div class="portfolio-overlay">
             <h4>Coastal Architecture</h4>
             <p>Eastern Suburbs</p>
@@ -1398,7 +1398,6 @@
   </footer>
 
   <script>
-    // Navbar Scroll Effect
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       if (window.scrollY > 50) {
@@ -1408,7 +1407,6 @@
       }
     });
 
-    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     
@@ -1424,7 +1422,6 @@
       }
     });
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -1434,25 +1431,21 @@
       });
     });
 
-    // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
         const item = button.parentElement;
         const isActive = item.classList.contains('active');
         
-        // Close all other items
         document.querySelectorAll('.faq-item').forEach(faqItem => {
           faqItem.classList.remove('active');
         });
         
-        // Toggle current item
         if (!isActive) {
           item.classList.add('active');
         }
       });
     });
 
-    // Intersection Observer for Scroll Reveals
     const revealOptions = {
       threshold: 0.15,
       rootMargin: "0px 0px -50px 0px"
