@@ -1303,7 +1303,7 @@
     <div class="container hero-content">
       <div class="hero-grid">
         <div class="hero-text">
-          <div style="font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); margin-bottom: 20px;">Mako Buyers Agency</div>
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: #FFFFFF; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; opacity: 0.9;">Mako Buyers Agency</div>
           <h1>Your dream home,<br /><em>at a dream price.</em></h1>
           <p class="hero-sub">Expert property search, strategic negotiation, and professional auction representation across Sydney's Northern Beaches and Lower North Shore.</p>
           <div class="hero-actions">
@@ -1658,8 +1658,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="mako_logo.png" alt="Mako Buyers Agency" />
-          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Mako Buyers Agency</div>
-          <p>Independent buyer's agency specialising in Sydney's Northern Beaches and Lower North Shore. We act exclusively for you &mdash; never the seller.</p>
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px; letter-spacing: 1px;">Mako Buyers Agency</div>
+          <p>Independent buyer's agency specialising in Sydney's Northern Beaches and Lower North Shore. We act exclusively for you — never the seller.</p>
           <div class="footer-legal">ABN: 31 406 616 265 &nbsp;|&nbsp; NSW Licence: #20511842</div>
         </div>
         <div class="footer-contact">
@@ -1715,4 +1715,20 @@
     });
 
     /* Scroll reveal animations */
-    const revealObserver = new IntersectionObserv
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('vis');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
