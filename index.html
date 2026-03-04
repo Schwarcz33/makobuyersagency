@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mako Buyers Agency | Sydney's Independent Buyer's Agent</title>
-  <meta name="description" content="Mako Buyers Agency — Independent buyer's agent specialising in Sydney's Northern Beaches and Lower North Shore. Expert property search, appraisal, negotiation and auction bidding. Your dream home at a dream price.">
+  <title>Mako Buyers Agency | Sydney Buyer's Agent</title>
+  <meta name="description" content="Mako Buyers Agency — Buyer's agency specialising in Sydney's Northern Beaches and Lower North Shore. Expert property search, appraisal, negotiation and auction bidding. Your dream home at a dream price.">
   <meta name="theme-color" content="#0B1D3A">
   <link rel="icon" type="image/png" href="mako_logo.png">
   <meta property="og:title" content="Mako Buyers Agency | Sydney Buyer's Agent">
-  <meta property="og:description" content="Independent buyer's agent specialising in Northern Beaches and Lower North Shore. Expert search, negotiation, and auction representation.">
+  <meta property="og:description" content="Buyer's agency specialising in Northern Beaches and Lower North Shore. Expert search, negotiation, and auction representation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://makobuyers.com.au">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
   <style>
-    :root{--navy:#0B1D3A;--navy-deep:#071428;--navy-light:#142E54;--blue:#0099E5;--blue-hover:#007BBF;--blue-glow:rgba(0,153,229,0.15);--sky:#E6F3FC;--gold:#C5A55A;--gold-light:#DCC07E;--white:#FFFFFF;--off-white:#F7F8FA;--dark:#1A1A2E;--text:#3D4555;--text-light:#6B7489;--border:#E2E6ED;--heading:'Cormorant Garamond',Georgia,serif;--body:'Outfit',-apple-system,sans-serif;--shadow-sm:0 2px 8px rgba(11,29,58,0.06);--shadow-lg:0 20px 60px rgba(11,29,58,0.12);--shadow-xl:0 30px 80px rgba(11,29,58,0.16);--radius:6px}
+    :root{--navy:#0B1D3A;--navy-deep:#071428;--blue:#0099E5;--blue-hover:#007BBF;--blue-glow:rgba(0,153,229,0.15);--sky:#E6F3FC;--gold:#C5A55A;--gold-light:#DCC07E;--white:#FFFFFF;--off-white:#F7F8FA;--dark:#1A1A2E;--text:#3D4555;--text-light:#6B7489;--border:#E2E6ED;--heading:'Cormorant Garamond',Georgia,serif;--body:'Outfit',-apple-system,sans-serif;--shadow-sm:0 2px 8px rgba(11,29,58,0.06);--shadow-lg:0 20px 60px rgba(11,29,58,0.12);--shadow-xl:0 30px 80px rgba(11,29,58,0.16);--radius:6px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
     body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     h1,h2,h3,h4{font-family:var(--heading);color:var(--navy);line-height:1.15;font-weight:600}
@@ -35,7 +35,8 @@
     /* NAV */
     .site-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(11,29,58,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06);padding:18px 0;transition:all .4s ease}
     .site-nav.scrolled{padding:12px 0;box-shadow:0 4px 30px rgba(0,0,0,.15)}
-    .nav-inner{display:flex;justify-content:space-between;align-items:center}.nav-logo img{height:38px}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center}
+    .nav-logo img{height:52px}
     .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
     .nav-links a{color:rgba(255,255,255,.8);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px}.nav-links a:hover{color:var(--white)}
     .nav-links .nav-cta{background:var(--blue);color:var(--white);padding:11px 26px;border-radius:var(--radius);font-size:12px}.nav-links .nav-cta:hover{background:var(--blue-hover);transform:translateY(-2px)}
@@ -50,7 +51,6 @@
     .hero-content{position:relative;z-index:10}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
     .hero-text{animation:heroFadeUp 1s ease .15s both}
-    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(0,153,229,.08);border:1px solid rgba(0,153,229,.25);color:var(--blue);padding:8px 18px;border-radius:var(--radius);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:32px}
     .hero h1{color:var(--white);font-size:clamp(44px,5.5vw,68px);line-height:1.08;margin-bottom:28px}
     .hero h1 em{color:var(--blue);font-style:italic}
     .hero-sub{color:rgba(255,255,255,.65);font-size:clamp(17px,1.8vw,20px);max-width:560px;margin-bottom:44px;font-weight:300;line-height:1.7}
@@ -170,6 +170,7 @@
 </head>
 <body>
 
+  <!-- NAV — logo bigger (52px), no badge -->
   <nav class="site-nav" id="siteNav">
     <div class="container nav-inner">
       <a href="#" class="nav-logo"><img src="mako_logo.png" alt="Mako Buyers Agency"></a>
@@ -185,6 +186,7 @@
     </div>
   </nav>
 
+  <!-- HERO — no badge, Helga = Founder -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-gradient" aria-hidden="true"></div>
@@ -192,7 +194,6 @@
     <div class="container hero-content">
       <div class="hero-grid">
         <div class="hero-text">
-          <div class="hero-badge"><i class="fas fa-shield-halved"></i> Independent Buyer's Agent — Sydney</div>
           <h1>Your dream home,<br><em>at a dream price.</em></h1>
           <p class="hero-sub">Expert property search, strategic negotiation, and professional auction representation across Sydney's Northern Beaches and Lower North Shore.</p>
           <div class="hero-actions">
@@ -201,10 +202,10 @@
           </div>
         </div>
         <div class="agent-card">
-          <div class="agent-card-img"><img src="professional_agent_photo.jpg" alt="Helga — Lead Buyer's Agent"></div>
+          <div class="agent-card-img"><img src="professional_agent_photo.jpg" alt="Helga — Founder of Mako Buyers Agency"></div>
           <div class="agent-card-meta">
             <div class="agent-card-badge"><i class="fas fa-check"></i></div>
-            <div class="agent-card-name"><h4>Helga</h4><p>Lead Buyer's Agent</p></div>
+            <div class="agent-card-name"><h4>Helga</h4><p>Founder</p></div>
           </div>
           <div class="agent-card-quote">"I will help you buy your dream home at a dream price."</div>
         </div>
@@ -212,10 +213,11 @@
     </div>
   </section>
 
+  <!-- TRUST BAR -->
   <div class="trust-bar reveal">
     <div class="container">
       <div class="trust-grid">
-        <div class="trust-item"><div class="trust-icon"><i class="fas fa-shield-halved"></i></div><h4>Licensed Agent</h4><p>NSW Licence #20511842</p></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fas fa-shield-halved"></i></div><h4>Licensed Agency</h4><p>NSW Licence #20511842</p></div>
         <div class="trust-item"><div class="trust-icon"><i class="fas fa-user-check"></i></div><h4>100% Buyer Side</h4><p>We never represent sellers</p></div>
         <div class="trust-item"><div class="trust-icon"><i class="fas fa-map-location-dot"></i></div><h4>Local Expertise</h4><p>Northern Beaches &amp; North Shore</p></div>
         <div class="trust-item"><div class="trust-icon"><i class="fas fa-handshake"></i></div><h4>Off-Market Access</h4><p>Properties before they list</p></div>
@@ -223,17 +225,17 @@
     </div>
   </div>
 
+  <!-- ABOUT — beach image, plural "we" language, no licence in credentials -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image reveal"><img src="professional_agent_photo.jpg" alt="Helga — Mako Buyers Agency"></div>
+        <div class="about-image reveal"><img src="about-beach.png" alt="Northern Beaches Sydney coastline"></div>
         <div class="about-text reveal">
-          <div class="section-eyebrow">Meet Helga</div>
-          <h2 class="section-heading">Your advocate in<br>Sydney's property market.</h2>
-          <p class="about-bio">Helga is a dedicated buyer's agent specialising in the Northern Beaches and Lower North Shore, committed to helping clients secure the right property with confidence. She combines strategic insight, skilled negotiation and deep local market knowledge to consistently deliver exceptional outcomes. Her focus is simple: protecting your interests while delivering a seamless and considered buying experience.</p>
+          <div class="section-eyebrow">About</div>
+          <h2 class="section-heading">Your advocates in<br>Sydney's property market.</h2>
+          <p class="about-bio">We are a dedicated buyer's agency specialising in the Northern Beaches and Lower North Shore, committed to helping clients secure the right property with confidence. We combine strategic insight, skilled negotiation and deep local market knowledge to consistently deliver exceptional outcomes. Our focus is simple: protecting your interests while delivering a seamless and considered buying experience.</p>
           <div class="about-credentials">
             <div class="credential"><span class="credential-label">ABN</span><span class="credential-value">31 406 616 265</span></div>
-            <div class="credential"><span class="credential-label">NSW Licence</span><span class="credential-value">#20511842</span></div>
             <div class="credential"><span class="credential-label">Location</span><span class="credential-value">Sydney, NSW</span></div>
           </div>
         </div>
@@ -241,6 +243,7 @@
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
       <div class="services-header reveal">
@@ -256,6 +259,7 @@
     </div>
   </section>
 
+  <!-- AREAS -->
   <section class="areas" id="areas">
     <div class="container">
       <div class="section-center reveal">
@@ -271,6 +275,7 @@
     </div>
   </section>
 
+  <!-- PROCESS -->
   <section class="process" id="process">
     <div class="container">
       <div class="reveal"><div class="section-eyebrow">Our Process</div><h2 class="section-heading">A transparent, proven<br>approach to buying.</h2></div>
@@ -286,6 +291,7 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-center reveal"><div class="section-eyebrow">Client Stories</div><h2 class="section-heading">Real results, real people.</h2></div>
@@ -297,19 +303,21 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="faq">
     <div class="container">
       <div class="section-center reveal"><div class="section-eyebrow">FAQ</div><h2 class="section-heading">Common questions.</h2></div>
       <div class="faq-list">
         <div class="faq-item reveal"><button class="faq-q">What types of buyers do you work with? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>We work with first-home buyers, upsizers, downsizers, and property investors. Our service is tailored entirely to your goals and circumstances — there's no one-size-fits-all approach.</p></div></div>
         <div class="faq-item reveal"><button class="faq-q">How are your fees structured? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>We offer end-to-end Search &amp; Buy packages as well as standalone services like Appraisal &amp; Negotiation or Auction Bidding. All fees are discussed transparently and agreed in writing before any engagement begins.</p></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Can you access off-market properties? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>Yes. A key advantage of using a buyer's agent is our established network of selling agents and industry contacts. We regularly access pre-market and off-market opportunities before they reach public portals.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Can you access off-market properties? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>Yes. A key advantage of using a buyer's agency is our established network of selling agents and industry contacts. We regularly access pre-market and off-market opportunities before they reach public portals.</p></div></div>
         <div class="faq-item reveal"><button class="faq-q">Do I still need my own solicitor or conveyancer? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>Yes — we handle the property search, appraisal, and negotiation, but you will need your own solicitor or licensed conveyancer to handle the legal exchange and settlement process. We can recommend trusted professionals if needed.</p></div></div>
         <div class="faq-item reveal"><button class="faq-q">What areas of Sydney do you cover? <i class="fas fa-plus faq-icon"></i></button><div class="faq-a"><p>We specialise in the Northern Beaches and Lower North Shore, though we also assist clients across Greater Sydney including the Eastern Suburbs, Inner West, and harbour-side locations.</p></div></div>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT — location changed to Northern Beaches -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-grid">
@@ -318,7 +326,7 @@
           <h2 class="section-heading">Let's talk about your<br>property goals.</h2>
           <p class="contact-intro">Whether you're buying your first home, investing, or downsizing — send us a message and we'll be in touch promptly to discuss how we can help.</p>
           <div class="contact-items">
-            <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-item-text"><h4>Location</h4><p>Narraweena, Sydney, NSW 2099</p></div></div>
+            <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-item-text"><h4>Location</h4><p>Northern Beaches, Sydney, NSW 2099</p></div></div>
             <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div class="contact-item-text"><h4>Phone</h4><p><a href="tel:0404381979">0404 381 979</a></p></div></div>
             <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div class="contact-item-text"><h4>Email</h4><p><a href="mailto:helga@makobuyers.com.au">helga@makobuyers.com.au</a></p></div></div>
           </div>
@@ -346,17 +354,18 @@
     </div>
   </section>
 
+  <!-- FOOTER — location changed to Northern Beaches -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="mako_logo.png" alt="Mako Buyers Agency">
-          <p>Independent buyer's agent specialising in Sydney's Northern Beaches and Lower North Shore. We act exclusively for you — never the seller.</p>
+          <p>Independent buyer's agency specialising in Sydney's Northern Beaches and Lower North Shore. We act exclusively for you — never the seller.</p>
           <div class="footer-legal">ABN: 31 406 616 265 &nbsp;|&nbsp; NSW Licence: #20511842</div>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Narraweena, Sydney, NSW 2099</p>
+          <p><i class="fas fa-map-marker-alt"></i> Northern Beaches, Sydney, NSW 2099</p>
           <p><i class="fas fa-phone"></i> <a href="tel:0404381979">0404 381 979</a></p>
           <p><i class="fas fa-envelope"></i> <a href="mailto:helga@makobuyers.com.au">helga@makobuyers.com.au</a></p>
         </div>
