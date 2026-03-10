@@ -218,10 +218,15 @@
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(36px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
                   transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal.hidden {
+      opacity: 0;
+      transform: translateY(36px);
     }
 
     .reveal.vis {
@@ -1744,4 +1749,24 @@
     });
 
     /* Scroll reveal animations */
-    const revealObserver = new IntersectionObserv
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
+          entry.target.classList.add('vis');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      el.classList.add('hidden');
+      revealObserver.observe(el);
+    });
+  </script>
+
+</body>
+</html>
