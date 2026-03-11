@@ -218,15 +218,10 @@
     }
 
     .reveal {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
-                  transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    .reveal.hidden {
       opacity: 0;
       transform: translateY(36px);
+      transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+                  transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
     .reveal.vis {
@@ -1187,11 +1182,29 @@
       }
 
       .agent-card {
-        display: none;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .agent-card-img {
+        height: 320px;
       }
 
       .hero {
-        padding: 160px 0 100px;
+        padding: 140px 0 80px;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
       }
 
       .services-grid,
@@ -1228,14 +1241,54 @@
         display: block;
       }
 
+      .hero {
+        padding: 120px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 44px);
+      }
+
+      .hero-sub {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .agent-card {
+        max-width: 100%;
+      }
+
+      .agent-card-img {
+        height: 280px;
+      }
+
       .services-grid,
       .test-grid,
       .areas-grid {
         grid-template-columns: 1fr;
       }
 
+      .area-card {
+        aspect-ratio: 16 / 9;
+      }
+
       .form-row {
         grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 28px 20px;
       }
 
       .footer-bottom {
@@ -1247,6 +1300,66 @@
       .about-credentials {
         flex-direction: column;
         gap: 20px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .section-heading {
+        font-size: clamp(28px, 6vw, 40px);
+      }
+
+      .process-grid {
+        gap: 40px;
+      }
+
+      .test-card {
+        padding: 28px 24px;
+      }
+
+      .service-card {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 110px 0 50px;
+      }
+
+      .nav-logo img {
+        height: 48px;
+      }
+
+      .agent-card-img {
+        height: 240px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .trust-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+      }
+
+      .about-grid,
+      .process-grid,
+      .contact-grid {
+        gap: 32px;
+      }
+
+      .contact-intro {
+        font-size: 15px;
+      }
+
+      .footer-grid {
+        gap: 32px;
       }
     }
 
@@ -1608,14 +1721,18 @@
               <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
               <div class="contact-item-text">
                 <h4>Email</h4>
-                <p><a href="mailto:helga@makobuyers.com.au">helga@makobuyers.com.au</a></p>
+                <p><a href="/cdn-cgi/l/email-protection#167e737a7177567b777d7974636f7364653875797b387763"><span class="__cf_email__" data-cfemail="18707d747f7958757973777a6d617d6a6b367b777536796d">[email&#160;protected]</span></a></p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="reveal">
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" action="https://formsubmit.co/helga@makobuyers.com.au" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Inquiry — Mako Buyers Agency Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://makobuyers.com.au/#contact" />
             <input type="text" name="_honey" style="display: none;" />
 
             <div class="form-row">
@@ -1646,10 +1763,7 @@
               <label for="message">Tell us about your property goals</label>
               <textarea id="message" name="message" class="form-input" required placeholder="What type of property are you looking for? First home, investment, downsizing?"></textarea>
             </div>
-            <div id="formSuccess" style="display:none; background: #e6f9f0; border: 1px solid #34c77b; color: #1a7a4a; padding: 16px 20px; border-radius: 6px; font-size: 15px; font-weight: 600; margin-bottom: 16px; text-align: center;">
-              ✓ Enquiry sent! Helga will be in touch shortly.
-            </div>
-            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+            <button type="submit" class="btn btn-primary form-submit">Send Enquiry <i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
@@ -1670,7 +1784,7 @@
           <h4>Contact</h4>
           <p><i class="fas fa-map-marker-alt"></i> Northern Beaches, Sydney, NSW 2099</p>
           <p><i class="fas fa-phone"></i> <a href="tel:0404381979">0404 381 979</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:helga@makobuyers.com.au">helga@makobuyers.com.au</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#244c414843456449454f4b46515d4156570a474b490a4551"><span class="__cf_email__" data-cfemail="b9d1dcd5ded8f9d4d8d2d6dbccc0dccbca97dad6d497d8cc">[email&#160;protected]</span></a></p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1681,7 +1795,7 @@
   </footer>
 
   <!-- ════════ JAVASCRIPT ════════ -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* Navigation scroll effect */
     window.addEventListener('scroll', () => {
       document.getElementById('siteNav').classList.toggle('scrolled', window.scrollY > 60);
@@ -1708,36 +1822,6 @@
       });
     });
 
-    /* AJAX Contact Form */
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
-        const success = document.getElementById('formSuccess');
-        btn.disabled = true;
-        btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-        const data = new FormData(contactForm);
-        data.append('_subject', 'New Inquiry — Mako Buyers Agency Website');
-        data.append('_captcha', 'false');
-        try {
-          await fetch('https://formsubmit.co/helga@makobuyers.com.au', {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-          success.style.display = 'block';
-          contactForm.reset();
-          setTimeout(() => { success.style.display = 'none'; }, 5000);
-        } catch (err) {
-          btn.innerHTML = 'Error — please try again';
-        } finally {
-          btn.disabled = false;
-          btn.innerHTML = 'Send Enquiry <i class="fas fa-paper-plane"></i>';
-        }
-      });
-    }
-
     /* FAQ accordion */
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1752,20 +1836,16 @@
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove('hidden');
           entry.target.classList.add('vis');
           revealObserver.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -20px 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
     });
 
-    document.querySelectorAll('.reveal').forEach(el => {
-      el.classList.add('hidden');
-      revealObserver.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 
 </body>
